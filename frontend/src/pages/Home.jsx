@@ -6,7 +6,7 @@ const Home = () => {
 
     return (
         <div className="container mx-auto p-6 absolute top-0">
-            <p className="text-3xl font-medium my-8">메인</p>
+            <p className="text-3xl font-medium my-8">main</p>
         </div>
     );
 };
