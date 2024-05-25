@@ -16,19 +16,18 @@ const Home = () => {
 
 
     return (
-        <div className="container mx-auto p-6">
-        <Swiper className="styles.mainSwiper flex-auto"
-                 modules={[Navigation, Pagination, A11y, Autoplay, EffectCoverflow, Pagination]}
+        <div className="container mx-auto p-6 shadow-md rounded-xl">
+        <Swiper className="styles.mainSwiper flex-auto rounded-xl"
+                 modules={[Navigation, Pagination, A11y, Autoplay, EffectCoverflow]}
                  effect={"coverflow"}
                 centeredSlides={true}
-                slidesPerView={1}
+                slidesPerView={"auto"}
                 coverflowEffect={{
                     rotate: 50,
                     stretch: 0,
                     depth: 100,
                     modifier: 1,
-                    slideShadows: true,
-                    blur:true,
+                    slideShadows: false,
                 }}
                  spaceBetween={30}
                  loop={true}
@@ -36,9 +35,9 @@ const Home = () => {
                  speed={400}
                  autoplay={{ delay: 3000, disableOnInteraction: false }}
         >
-            <SwiperSlide className="shadow-xl"><img src="https://ifh.cc/g/xDrpN5.jpg"/></SwiperSlide>
-            <SwiperSlide className="shadow-xl"><img src="https://ifh.cc/g/H6nDSb.jpg"/></SwiperSlide>
-            <SwiperSlide className="shadow-xl"><img src="https://ifh.cc/g/9lpjrr.jpg"/></SwiperSlide>
+            <SwiperSlide className="shadow-xl rounded-xl"><img className = "lg:hover:scale-110 transition-transform ease-in-out duration-500" src="https://ifh.cc/g/xDrpN5.jpg"/></SwiperSlide>
+            <SwiperSlide className="shadow-xl rounded-xl"><img className = "lg:hover:scale-110 transition-transform ease-in-out duration-500" src="https://ifh.cc/g/H6nDSb.jpg"/></SwiperSlide>
+            <SwiperSlide className="shadow-xl rounded-xl"><img className = "lg:hover:scale-110 transition-transform ease-in-out duration-500" src="https://ifh.cc/g/9lpjrr.jpg"/></SwiperSlide>
         </Swiper>
         </div>
     )

@@ -23,7 +23,7 @@ return (
                     </div>
                 </div>
                 <ul tabIndex={0}
-                    className="mt-3 z-[1] p-2 shadow-md menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                    className="mt-3 z-10 p-2 shadow-md menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                     <li>
                         <a className="justify-between font-bold">
                             Profile
