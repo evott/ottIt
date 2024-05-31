@@ -47,9 +47,8 @@ const Home = () => {
                     src="https://ifh.cc/g/9lpjrr.jpg"/></SwiperSlide>
             </Swiper>
             </div>
-            <Bookbox setImg={"https://ifh.cc/g/9lpjrr.jpg"}>
+        <Bookbox></Bookbox>
 
-            </Bookbox>
         </div>
     )
 }

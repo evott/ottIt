@@ -7,16 +7,31 @@ const Bookbox = () => {
 
 
     return (
-        <div className="p-4 sm:w-1/2 lg:w-1/3">
+        <div className="container mx-auto p-8">
+        <div className="p-4 flex flex-row">
             <div className="h-full border-2 border-gray-200 border-opacity-60
                         rounded-lg overflow-hidden">
                 <img
                     className="lg:h-72 md:h-48 w-full
                        object-cover object-center "
-                    src="https://picsum.photos/id/188/720/400/"
-                    alt="card image"
-                />
+                    src="https://ifh.cc/g/qGHNKZ.jpg"/>
+
             </div>
+            <div className="h-full border-2 border-gray-200 border-opacity-60
+                        rounded-lg overflow-hidden">
+                <img
+                    className="lg:h-72 md:h-48 w-full
+                       object-cover object-center "
+                    src="https://ifh.cc/g/8m99Qt.jpg"/>
+            </div>
+            <div className="h-full border-2 border-gray-200 border-opacity-60
+                        rounded-lg overflow-hidden">
+                <img
+                    className="lg:h-72 md:h-48 w-full
+                       object-cover object-center "
+                    src="https://ifh.cc/g/CadAPv.jpg"/>
+            </div>
+        </div>
         </div>
     )
 }
