@@ -3,7 +3,6 @@ import Home from "./pages/Home.jsx";
 import Navbar from "./components/Navbar.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
 
-
 function App() {
     return (
         <>
