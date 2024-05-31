@@ -41,5 +41,5 @@ const Home = () => {
         </Swiper>
         </div>
     )
-}
+}d
 export default Home;
