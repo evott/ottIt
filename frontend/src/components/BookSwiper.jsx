@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y, Autoplay, EffectCards } from "swiper";
+import { Navigation, Pagination, A11y, Autoplay} from "swiper";
 
 
 
@@ -16,16 +16,22 @@ const BookSwiper = () => {
     return (
         <>
             <Swiper
-                effect={'cards'}
+                effect={'fade'}
                 grabCursor={true}
                 centeredSlides={true}
-                modules={[EffectCards, Pagination]}
+                modules={[Pagination, Navigation]}
                 className="styles.mainSwiper"
-                pagination={true}
+                pagination={{
+                    clickable: true,
+                }}
+                navigation={true}
+                fadeEffect={{
+
+                }}
             >
-                <SwiperSlide><img className="object-fill" src="https://ifh.cc/g/qZPAYG.jpg"/></SwiperSlide>
-                <SwiperSlide><img className="object-fill" src="https://ifh.cc/g/qZPAYG.jpg"/></SwiperSlide>
-                <SwiperSlide><img className="object-fill" src="https://ifh.cc/g/qZPAYG.jpg"/></SwiperSlide>
+                <SwiperSlide className="artboard phone-2 "><img src="https://ifh.cc/g/qZPAYG.jpg"/></SwiperSlide>
+                <SwiperSlide className="artboard phone-2 "><img src="https://ifh.cc/g/qZPAYG.jpg"/></SwiperSlide>
+                <SwiperSlide className="artboard phone-2 "><img src="https://ifh.cc/g/qZPAYG.jpg"/></SwiperSlide>
             </Swiper>
         </>
 );
