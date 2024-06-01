@@ -13,7 +13,6 @@ import 'swiper/css/effect-coverflow';
 
 
 const Home = () => {
-    const [img, setImg] = useState("");
 
     return (
         <div className="container mx-auto p-8">  {/*슬라이더 박스*/}

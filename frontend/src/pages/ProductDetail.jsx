@@ -4,15 +4,6 @@ const ProductDetail = () => {
     return (
         <div className="product-detail-container">
             {/* 상단 부분 */}
-            <header className="product-detail-header">
-                <div className="logo-search">
-                    <input type="text" placeholder="통합검색" className="search-bar" />
-                </div>
-                <div className="user-cart">
-                    <button className="login-btn">로그인</button>
-                    <button className="cart-btn">장바구니</button>
-                </div>
-            </header>
 
             {/* 중간 부분 */}
             <main className="product-detail-main">
@@ -38,7 +29,7 @@ const ProductDetail = () => {
 
                 {/* 가운데 이미지 */}
                 <section className="product-detail-center">
-                    <img src="path-to-book-image.jpg" alt="책 이미지" className="book-image"/>
+
                 </section>
 
                 {/* 오른쪽 텍스트 */}
