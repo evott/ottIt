@@ -30,8 +30,8 @@ const BookSwiper = () => {
                 }}
             >
                 <SwiperSlide className="artboard phone-2 "><img src="https://ifh.cc/g/qZPAYG.jpg"/></SwiperSlide>
-                <SwiperSlide className="artboard phone-2 "><img src="https://ifh.cc/g/qZPAYG.jpg"/></SwiperSlide>
-                <SwiperSlide className="artboard phone-2 "><img src="https://ifh.cc/g/qZPAYG.jpg"/></SwiperSlide>
+                <SwiperSlide className="artboard phone-2 "><img src="https://ifh.cc/g/kWwx14.jpg"/></SwiperSlide>
+                <SwiperSlide className="artboard phone-2 "><img src="https://ifh.cc/g/qRsRd0.jpg"/></SwiperSlide>
             </Swiper>
         </>
 );
