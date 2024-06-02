@@ -18,10 +18,13 @@ export default {
     },
     extend: {},
   },
-  plugins: [
-    require("daisyui"),
-    require("@headlessui/react")
-  ],
+
+    plugins: [
+      require("daisyui"),
+      require("@headlessui/react"),
+      require('@tailwindcss/forms'),
+    ],
+
   daisyui: {
     themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "dark", // name of one of the included themes for dark mode

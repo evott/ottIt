@@ -3,6 +3,7 @@ import Home from "./pages/Home.jsx";
 import Navbar from "./components/Navbar.jsx";
 import BookDetail from "./pages/BookDetail.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
+import Login from "./components/Login.jsx";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/BookDetail" element={<BookDetail/>}/>
                 <Route path="/ProductDetail" element={<ProductDetail/>}/>
+                <Route path="/Login" element={<Login/>}/>
             </Routes>
         </>
     );
