@@ -1,13 +1,15 @@
-import {Link, useNavigate} from "react-router-dom";
+import {BrowserRouter, Link, useNavigate} from "react-router-dom";
 import React, {useEffect, useState} from 'react';
 import {useRecoilValue} from "recoil";
 import Rating from "../components/Rating.jsx";
 import BookSwiper from "../components/BookSwiper.jsx";
+import BottomBox from "../components/BottomBox.jsx";
 
 const BookDetail = () => {
 
     return (
-        <div className="container mx-auto p-8 flex">
+        <div className="container mx-auto w-full p-8 flex">
+            <BottomBox></BottomBox>
             <div className="flex-col flex h-full items-center md:w-1/3"> {/* 왼쪽 박스 */}
                 <div className="h-60"></div>
                 <div> {/* 책 출판 글 */}
@@ -83,8 +85,10 @@ const BookDetail = () => {
                         <a className="text-2xl ml-1.5 font-semibold text-black">14,400원</a>
                         <a className="text-sm ml-1.5 line-through font-medium text-gray-600 ">16,000원</a>
                     </p>
-                    <p className="border-y w-80 text-black border-solid flex py-5 text-left font-black mr-5 text-sm">적립/혜택
+                    <div className="mr-2 flex flex-row items-center justify-center">
+                    <p className="border-y w-80 text-black border-solid flex flex-row py-5 text-left font-black text-sm">적립/혜택
                         <p className="items-center ml-[12.8rem] justify-center text-sm text-yellow-400">800P</p></p>
+                </div>
                 </div>
                 <div className="flex-col border-b border-solid h-[6.4rem] mr-4 flex w-80">
                     <p className="mt-4 text-sm font-black text-black">배송안내
@@ -124,6 +128,7 @@ const BookDetail = () => {
                 </div>
             </div>
         </div>
+
     )
 }
 
