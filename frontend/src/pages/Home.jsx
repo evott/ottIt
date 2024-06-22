@@ -46,7 +46,10 @@ const Home = () => {
                     src="https://ifh.cc/g/9lpjrr.jpg"/></SwiperSlide>
             </Swiper>
             </div>
-        <Bookbox></Bookbox>
+            <div className="mt-[3rem] space-x-7 flex-row items-center"> {/* 책 탭 페이지 1 */}
+                <a className="text-black font-black text-[1.7rem] items-center justify-start">화제의 신상</a>
+            </div>
+            <Bookbox tab={0}></Bookbox>
 
         </div>
     )
