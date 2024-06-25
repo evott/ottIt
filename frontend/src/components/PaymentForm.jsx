@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 const PaymentForm = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
     const [cardNumber, setCardNumber] = useState('');
     const [expiryDate, setExpiryDate] = useState('');
@@ -13,8 +11,6 @@ const PaymentForm = () => {
         event.preventDefault();
         // 결제 처리 로직을 여기에 추가하세요
         console.log('Payment submitted:', {
-            name,
-            email,
             address,
             cardNumber,
             expiryDate,
