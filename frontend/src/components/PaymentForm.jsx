@@ -66,10 +66,10 @@ const PaymentForm = () => {
                         </label>@
                         <select className="select w-full max-w-xs">
                             <option disabled selected>이메일을 선택해주세요</option>
-                            <option>naver.com</option>
+                            <option>naiver.com</option>
                             <option>gmail.com</option>
                             <option>nate.com</option>
-                            <option>daum.net</option>
+                            <option>dam.net</option>
                             <option>korea.com</option>
                         </select>
                     </div>
