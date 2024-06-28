@@ -34,20 +34,33 @@ const PaymentForm = () => {
             <form onSubmit={handleSubmit}>
 
                 {/* 주문 상품 목록 */}
-                <div style={{ marginBottom: '30px' }}>
+                <div className="">
                     <h3>주문 상품 목록</h3>
-                    <div style={{ border: '1px solid #eee', padding: '10px', borderRadius: '5px' }}>
-                        <p>상품 1 - 가격: ₩10,000</p>
-                        <p>상품 2 - 가격: ₩20,000</p>
-                        <p>상품 3 - 가격: ₩30,000</p>
-                        <p>총 가격: ₩60,000</p>
+                    <div className="m-3 p-2 border-solid border-2">
+                        <div className="flex h-100">
+                            <div className=" inline-block align-middle w-20 ">
+                                <figure>
+                                    <img
+                                        src="https://ifh.cc/g/lSsBcL.jpg"/>
+                                </figure>
+                            </div>
+                            <div className="flex-auto w-60 p-11">
+                                [국내도서] 구의 증명
+                            </div>
+                            <div className="flex-auto w-7 p-11">
+                                1개
+                            </div>
+                            <div className="flex-auto w-10 p-11 value ='won'">
+                                12,000원
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 {/* 주문자 정보 */}
-                <div style={{ marginBottom: '30px' }}>
+                <div className="pb-10">
                     <h3>주문자 정보</h3>
-                    <div style={{ marginBottom: '15px' }}>
+                    <div className="pb-5">
                         <label className="form-control w-full max-w-xs">
                             <div className="label">
                                 <span className="label-text">성함</span>
@@ -56,22 +69,24 @@ const PaymentForm = () => {
                                    className="input input-bordered w-full max-w-xs"/>
                         </label>
                     </div>
-                    <div style={{marginBottom: '15px'}}>
-                        <label className="form-control max-w-xs">
-                            <div className="label">
+                    <div className="pb-15 ">
+                        <label className="form-control ">
+                            <div className="label ">
                                 <span className="label-text">이메일</span>
                             </div>
-                            <input type="text" placeholder="이메일 입력"
-                                   className="input input-bordered max-w-xs"/>
-                        </label>@
-                        <select className="select w-full max-w-xs">
-                            <option disabled selected>이메일을 선택해주세요</option>
-                            <option>naiver.com</option>
-                            <option>gmail.com</option>
-                            <option>nate.com</option>
-                            <option>dam.net</option>
-                            <option>korea.com</option>
-                        </select>
+                            <div>
+                                <input type="text" placeholder="이메일 입력"
+                                       className="input input-bordered w-1/3"/> @
+                                <select className="select w-full max-w-xs ">
+                                    <option disabled selected>이메일을 선택해주세요</option>
+                                    <option>naiver.com</option>
+                                    <option>gmail.com</option>
+                                    <option>nate.com</option>
+                                    <option>dam.net</option>
+                                    <option>korea.com</option>
+                                </select>
+                            </div>
+                        </label>
                     </div>
                 </div>
 
@@ -84,19 +99,19 @@ const PaymentForm = () => {
                             type="text"
                             value={address}
                             onChange={(e) => setAddress(e.target.value)}
-                            style={{ width: '100%', padding: '8px', boxSizing: 'border-box' }}
+                            style={{width: '100%', padding: '8px', boxSizing: 'border-box'}}
                             required
                         />
                     </div>
                 </div>
 
                 {/* 결제 수단 선택 */}
-                <div style={{ marginBottom: '30px' }}>
+                <div className="mb-16">
                     <h3>결제 수단 선택</h3>
-                    <div style={{marginBottom: '15px'}}>
+                    <div className="mb-3 pt-3">
                         <label>
                             <input type="checkbox" name="test" value="creditCard"
-                                   onChange={(e) => checkOnlyOne(e.target)} />
+                                   onChange={(e) => checkOnlyOne(e.target)}/>
                             신용카드&nbsp;
                         </label>
                         <label>
@@ -118,34 +133,34 @@ const PaymentForm = () => {
 
                     {paymentMethod === 'creditCard' && (
                         <>
-                        <div style={{marginBottom: '15px'}}>
+                            <div style={{marginBottom: '15px'}}>
                                 <label style={{display: 'block', marginBottom: '5px'}}>카드 번호:</label>
                                 <input
                                     type="text"
                                     value={cardNumber}
                                     onChange={(e) => setCardNumber(e.target.value)}
-                                    style={{ width: '100%', padding: '8px', boxSizing: 'border-box' }}
+                                    style={{width: '100%', padding: '8px', boxSizing: 'border-box'}}
                                     required
                                 />
                             </div>
-                            <div style={{ marginBottom: '15px', display: 'flex', justifyContent: 'space-between' }}>
-                                <div style={{ width: '48%' }}>
-                                    <label style={{ display: 'block', marginBottom: '5px' }}>유효기간:</label>
+                            <div style={{marginBottom: '15px', display: 'flex', justifyContent: 'space-between'}}>
+                                <div style={{width: '48%'}}>
+                                    <label style={{display: 'block', marginBottom: '5px'}}>유효기간:</label>
                                     <input
                                         type="text"
                                         value={expiryDate}
                                         onChange={(e) => setExpiryDate(e.target.value)}
-                                        style={{ width: '100%', padding: '8px', boxSizing: 'border-box' }}
+                                        style={{width: '100%', padding: '8px', boxSizing: 'border-box'}}
                                         required
                                     />
                                 </div>
-                                <div style={{ width: '48%' }}>
-                                    <label style={{ display: 'block', marginBottom: '5px' }}>CVV:</label>
+                                <div style={{width: '48%'}}>
+                                    <label style={{display: 'block', marginBottom: '5px'}}>CVV:</label>
                                     <input
                                         type="text"
                                         value={cvv}
                                         onChange={(e) => setCvv(e.target.value)}
-                                        style={{ width: '100%', padding: '8px', boxSizing: 'border-box' }}
+                                        style={{width: '100%', padding: '8px', boxSizing: 'border-box'}}
                                         required
                                     />
                                 </div>
@@ -155,9 +170,7 @@ const PaymentForm = () => {
                 </div>
 
                 {/* 결제하기 버튼 */}
-                <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', fontSize: '16px' }}>
-                    결제하기
-                </button>
+                <button className="btn btn-primary w-40 ml-72 mt-5">결제하기</button>
             </form>
         </div>
     );
