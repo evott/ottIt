@@ -9,7 +9,6 @@ const PaymentForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // 결제 처리 로직을 여기에 추가하세요
         console.log('Payment submitted:', {
             address,
             cardNumber,
@@ -29,12 +28,12 @@ const PaymentForm = () => {
     }
 
     return (
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
+        <div className="justify-self-center ml-80 mr-80 p-8 border-2 border-gray-400">
             <h2>결제하기</h2>
             <form onSubmit={handleSubmit}>
 
                 {/* 주문 상품 목록 */}
-                <div className="">
+                <div className="pb-5">
                     <h3>주문 상품 목록</h3>
                     <div className="m-3 p-2 border-solid border-2">
                         <div className="flex h-100">
@@ -91,15 +90,14 @@ const PaymentForm = () => {
                 </div>
 
                 {/* 배송 정보 */}
-                <div style={{marginBottom: '30px'}}>
+                <div className="mb-14">
                     <h3>배송 정보</h3>
-                    <div style={{marginBottom: '15px'}}>
-                        <label style={{display: 'block', marginBottom: '5px'}}>주소:</label>
-                        <input
+                    <div className="mt-3 mb-12">
+                        <label className="border-black mb-10">주소:</label>
+                        <input className="w-96 m-3 border-solid border-gray-800"
                             type="text"
                             value={address}
                             onChange={(e) => setAddress(e.target.value)}
-                            style={{width: '100%', padding: '8px', boxSizing: 'border-box'}}
                             required
                         />
                     </div>
@@ -170,7 +168,7 @@ const PaymentForm = () => {
                 </div>
 
                 {/* 결제하기 버튼 */}
-                <button className="btn btn-primary w-40 ml-72 mt-5">결제하기</button>
+                <button className="btn btn-primary w-40 mt-5 ml-72">결제하기</button>
             </form>
         </div>
     );
