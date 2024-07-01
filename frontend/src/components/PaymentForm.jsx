@@ -18,15 +18,6 @@ const PaymentForm = () => {
         });
     };
 
-    const checkOnlyOne = (checkThis) => {
-        const checkboxes = document.getElementsByName('test')
-        for (let i = 0; i < checkboxes.length; i++) {
-            if (checkboxes[i] !== checkThis) {
-                checkboxes[i].checked = false
-            }
-        }
-    }
-
     return (
         <div className="justify-self-center ml-80 mr-80 p-8 border-2 border-gray-400">
             <h2>결제하기</h2>
@@ -39,8 +30,7 @@ const PaymentForm = () => {
                         <div className="flex h-100">
                             <div className=" inline-block align-middle w-20 ">
                                 <figure>
-                                    <img
-                                        src="https://ifh.cc/g/lSsBcL.jpg"/>
+                                    <img src='https://ifh.cc/g/lSsBcL.jpg'/>
                                 </figure>
                             </div>
                             <div className="flex-auto w-60 p-11">
@@ -109,22 +99,27 @@ const PaymentForm = () => {
                     <div className="mb-3 pt-3">
                         <label>
                             <input type="checkbox" name="test" value="creditCard"
-                                   onChange={(e) => checkOnlyOne(e.target)}/>
+                                   checked={paymentMethod === 'creditCard'}
+                                   onChange={(e) => setPaymentMethod(e.target.value)}
+                            />
                             신용카드&nbsp;
                         </label>
                         <label>
-                            <input type="checkbox" name="test" value="kakaoPay"
-                                   onChange={(e) => checkOnlyOne(e.target)}/>
+                            <input type="checkbox" name="test" value="kaoPay"
+                                   checked={paymentMethod === 'kaoPay'}
+                                   onChange={(e) => setPaymentMethod(e.target.value)}/>
                             카카오페이&nbsp;
                         </label>
                         <label>
-                            <input type="checkbox" name="test" value="naverPay"
-                                   onChange={(e) => checkOnlyOne(e.target)}/>
+                            <input type="checkbox" name="test" value="naiverPay"
+                                   checked={paymentMethod === 'naiverPay'}
+                                   onChange={(e) => setPaymentMethod(e.target.value)}/>
                             네이버페이&nbsp;
                         </label>
                         <label>
                             <input type="checkbox" name="test" value="bank"
-                                   onChange={(e) => checkOnlyOne(e.target)}/>
+                                   checked={paymentMethod === 'bank'}
+                                   onChange={(e) => setPaymentMethod(e.target.value)}/>
                             은행 이체
                         </label>
                     </div>
