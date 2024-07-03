@@ -96,7 +96,7 @@ const PaymentForm = () => {
                 {/* 결제 수단 선택 */}
                 <div className="mb-16">
                     <h3>결제 수단 선택</h3>
-                    <div className="mb-3 pt-3">
+                    <div className="mb-10">
                         <label>
                             <input type="checkbox" name="test" value="creditCard"
                                    checked={paymentMethod === 'creditCard'}
@@ -105,17 +105,17 @@ const PaymentForm = () => {
                             신용카드&nbsp;
                         </label>
                         <label>
-                            <input type="checkbox" name="test" value="kaoPay"
-                                   checked={paymentMethod === 'kaoPay'}
-                                   onChange={(e) => setPaymentMethod(e.target.value)}/>
-                            카카오페이&nbsp;
+                                <input type="checkbox" name="test" value="kaoPay"
+                                       checked={paymentMethod === 'kaoPay'}
+                                       onChange={(e) => setPaymentMethod(e.target.value)}/>
+                                <img src="https://ifh.cc/g/ZcaDQh.png" className="w-20"/>
                         </label>
                         <label>
                             <input type="checkbox" name="test" value="naiverPay"
                                    checked={paymentMethod === 'naiverPay'}
                                    onChange={(e) => setPaymentMethod(e.target.value)}/>
-                            네이버페이&nbsp;
                         </label>
+                        <img src="https://ifh.cc/g/kJ6ZCH.jpg" className="w-20"/>
                         <label>
                             <input type="checkbox" name="test" value="bank"
                                    checked={paymentMethod === 'bank'}
@@ -126,34 +126,34 @@ const PaymentForm = () => {
 
                     {paymentMethod === 'creditCard' && (
                         <>
-                            <div className="mb-16">
-                                <label style={{display: 'block', marginBottom: '5px'}}>카드 번호:</label>
+                            <div className="mb-10">
+                                <label className="mb-10 w-max">카드 번호:</label><br/>
                                 <input
                                     type="text"
                                     value={cardNumber}
                                     onChange={(e) => setCardNumber(e.target.value)}
-                                    style={{width: '100%', padding: '8px', boxSizing: 'border-box'}}
+                                    className="w-full p-2 border-gray-800"
                                     required
                                 />
                             </div>
-                            <div style={{marginBottom: '15px', display: 'flex', justifyContent: 'space-between'}}>
-                                <div style={{width: '48%'}}>
-                                    <label style={{display: 'block', marginBottom: '5px'}}>유효기간:</label>
+                            <div className="wb-10 flex items-stretch ">
+                                <div className="w-1/2">
+                                    <label className="mb-2">유효기간:</label>
                                     <input
                                         type="text"
                                         value={expiryDate}
                                         onChange={(e) => setExpiryDate(e.target.value)}
-                                        style={{width: '100%', padding: '8px', boxSizing: 'border-box'}}
+                                        className="w-full p-2 border-gray-800"
                                         required
                                     />
                                 </div>
-                                <div style={{width: '48%'}}>
-                                    <label style={{display: 'block', marginBottom: '5px'}}>CVV:</label>
+                                <div className="w-1/2 ml-3">
+                                    <label className="mb-2">CVV:</label>
                                     <input
                                         type="text"
                                         value={cvv}
                                         onChange={(e) => setCvv(e.target.value)}
-                                        style={{width: '100%', padding: '8px', boxSizing: 'border-box'}}
+                                        className="w-full p-2 border-gray-800"
                                         required
                                     />
                                 </div>
@@ -163,7 +163,7 @@ const PaymentForm = () => {
                 </div>
 
                 {/* 결제하기 버튼 */}
-                <button className="btn btn-primary w-40 mt-5 ml-72">결제하기</button>
+                <button className="btn btn-primary w-40 mt-5 ml-80">결제하기</button>
             </form>
         </div>
     );
