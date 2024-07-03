@@ -126,7 +126,7 @@ const PaymentForm = () => {
 
                     {paymentMethod === 'creditCard' && (
                         <>
-                            <div style={{marginBottom: '15px'}}>
+                            <div className="mb-16">
                                 <label style={{display: 'block', marginBottom: '5px'}}>카드 번호:</label>
                                 <input
                                     type="text"
