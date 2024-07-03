@@ -10,7 +10,7 @@ const BookDetail = () => {
     return (
         <div className="container mx-auto w-full p-8 flex">
             <BottomBox></BottomBox>
-            <div className="flex-col flex h-full items-center md:w-1/3"> {/* 왼쪽 박스 */}
+            <div className="flex-col flex mx-auto h-full items-center md:w-1/3"> {/* 왼쪽 박스 */}
                 <div className="h-60"></div>
                 <div> {/* 책 출판 글 */}
                     <p className="text-sm text-left font-semibold leading-10">이세종 저자(글) · 양희석 번역</p>
@@ -54,7 +54,7 @@ const BookDetail = () => {
                 </div>
             </div>
 
-            <div className="flex-col flex items-center m-10 h-full w-full md:w-1/3 "> {/* 가운데 박스 */}
+            <div className="flex-col flex items-center mx-auto m-10 h-full w-full md:w-1/3 "> {/* 가운데 박스 */}
                 <p className={"text-2xl font-semibold"}>기분이 태도가 되지 말자</p>
                 <div className="join p-5"> {/* 책 종류 선정 */}
                     <input className="join-item btn btn-square w-32 shadow-md" type="radio" name="options"
@@ -74,10 +74,10 @@ const BookDetail = () => {
             <div className="flex-col flex h-full items-center md:w-1/3"> {/* 오른쪽 박스 */}
                 <div className="h-60"></div>
                 <div> {/* 책 출판 글 */}
-                    <div className="columns-3 w-[8.5rem] py-2 items-start justify-start"><p
-                        className="shadow text-xs text-center text-gray-500 font-medium rounded-sm outline-gray-200 outline outline-1 h-4 w-11">사은품</p>
-                        <p className="shadow text-xs text-gray-500 text-center font-medium rounded-sm outline-gray-200 outline outline-1 h-4 w-11">이벤트</p>
-                        <p className="shadow text-xs text-center text-gray-500 font-medium rounded-sm outline-gray-200 outline outline-1 h-4 w-14">소득공제</p>
+                    <div className="columns-3 w-[8.5rem] py-2 items-start justify-start">
+                        <p className="shadow text-xs text-center text-gray-500 font-medium rounded-sm outline-gray-200 outline outline-1 h-4 w-11">사은품</p>
+                        <p className="shadow text-xs text-center text-gray-500 font-medium rounded-sm outline-gray-200 outline outline-1 h-4 w-11">이벤트</p>
+                        <p className="shadow text-xs text-center text-gray-500 font-medium rounded-sm outline-gray-200 outline outline-1 h-4 w-11">소득공제</p>
                     </div>
 
                     <p className="text-xl mt-4 mb-4 text-left text-neutral-500 font-medium">

@@ -15,34 +15,63 @@ import 'swiper/css/effect-coverflow';
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
+
+
     const tabContent =[
         {
-            tabTitle:(
-                <li className={activeIndex===0 ? "is-active" : "", "cursor-pointer"} onClick={()=>tabClickHandler(0)}> 전체 </li>
+            tabTitle: (
+                <li
+                    style={{
+                        color: activeIndex === 0 ? 'blue' : 'black',
+                        fontWeight: activeIndex === 0 ? 'bold' : 'normal',
+                        cursor: 'pointer'
+                    }}
+                    onClick={() => tabClickHandler(0)}
+                >
+                    전체
+                </li>
             ),
-            tabCont:(
+            tabCont: (
                 <div><Bookbox tab={0}></Bookbox></div>
             )
         },
         {
-            tabTitle:(
-                <li className={activeIndex===1 ? "is-active" : "", "cursor-pointer"} onClick={()=>tabClickHandler(1)}> 국내도서 </li>
+            tabTitle: (
+                <li
+                    style={{
+                        color: activeIndex === 1 ? 'blue' : 'black',
+                        fontWeight: activeIndex === 1 ? 'bold' : 'normal',
+                        cursor: 'pointer'
+                    }}
+                    onClick={() => tabClickHandler(1)}
+                >
+                    국내도서
+                </li>
             ),
-            tabCont:(
+            tabCont: (
                 <div><Bookbox tab={1}></Bookbox></div>
             )
         },
         {
-            tabTitle:(
-                <li className={activeIndex===2 ? "is-active" : "", "cursor-pointer"} onClick={()=>tabClickHandler(2)}> 서양도서 </li>
+            tabTitle: (
+                <li
+                    style={{
+                        color: activeIndex === 2 ? 'blue' : 'black',
+                        fontWeight: activeIndex === 2 ? 'bold' : 'normal',
+                        cursor: 'pointer'
+                    }}
+                    onClick={() => tabClickHandler(2)}
+                >
+                    서양도서
+                </li>
             ),
-            tabCont:(
+            tabCont: (
                 <div><Bookbox tab={2}></Bookbox></div>
             )
         },
     ];
 
-    const tabClickHandler=(index) =>{
+    const tabClickHandler = (index) => {
         setActiveIndex(index)
     }
 

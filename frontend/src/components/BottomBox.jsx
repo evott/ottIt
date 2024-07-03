@@ -38,12 +38,12 @@ const BottomBox = () => {
                     <p className="font-bold text-base text-black">선물하기</p>
                 </div>
                 <div
-                    className="flex ml-[0.5rem] hover:bg-gray-100 mb-[0.47rem] h-[3rem] w-[7.3rem] items-center justify-center cursor-pointer rounded-l-md outline outline-1 outline-indigo-800">
+                    className="flex ml-[0.5rem] hover:bg-gray-100 mb-[0.47rem] h-[2.9rem] w-[7.3rem] items-center justify-center cursor-pointer rounded-l-md ring-offset-0 ring-[0.04rem] ring-indigo-800 bg-white">
                     {/* 장바구니 */}
                     <p className="font-bold text-base text-indigo-800">장바구니</p>
                 </div>
                 <div
-                    className="flex ml-[rem] hover:bg-indigo-800 mb-[0.47rem] h-[3rem] w-[7.3rem] items-center justify-center cursor-pointer rounded-r-md outline outline-1 bg-indigo-700 outline-indigo-700">
+                    className="flex hover:bg-indigo-800 mb-[0.47rem] h-[3rem] w-[7.3rem] items-center justify-center cursor-pointer rounded-r-md bg-indigo-700 ring-offset-0 ring-0">
                     {/* 바로구매 */}
                     <p className="font-bold text-base text-white">바로구매</p>
                 </div>
