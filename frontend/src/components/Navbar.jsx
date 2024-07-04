@@ -6,6 +6,10 @@
         const Navbar = () => {
             const navigate = useNavigate();
 
+            const handleClick = () => {
+                navigate(`/`);
+            };
+
             return (
                 <div className="navbar bg-base-100">
                     <div className="navbar-start">
@@ -38,7 +42,7 @@
                                         <a><img className="mt-1 ml-2 w-28 mx-auto p-auto" alt="로고"
                                                 src="https://ifh.cc/g/VRak2k.png"/></a>
                                     </div>
-                                    <li className="flex-row">
+                                    <li className="flex-row" onClick={handleClick}>
                                         <a>
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none"
                                                  viewBox="0 0 24 24" stroke="currentColor">

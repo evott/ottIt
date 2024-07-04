@@ -1,12 +1,17 @@
-import {Link, useNavigate} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import React, {useEffect, useState} from 'react';
 import {useRecoilTransaction_UNSTABLE, useRecoilValue} from "recoil";
+import axios from 'axios';
 
 const Bookbox = (props) => {
+
+    const [ Bid, setBid ] = useState(0);
+
     const navigate = useNavigate();
 
-    const handleClick = () => {
-        navigate('/BookDetail');
+    const handleClick = (Bid) => {
+        setBid(Bid);
+        navigate(`/BookDetail/${Bid}`);
     };
 
     if(props.tab==0){ {/* 전체 */}
@@ -14,7 +19,7 @@ const Bookbox = (props) => {
                <div className="container mx-auto p-8 items-center justify-center flex">
                    <div className="space-x-6 flex flex-row">
                        <div
-                           className="h-full rounded-lg overflow-hidden transform transition-transform cursor-pointer duration-300 hover:scale-105">
+                           className="h-full rounded-lg overflow-hidden transform transition-transform cursor-pointer duration-300 hover:scale-105" onClick={() => handleClick(2)}>
                            <img
                                className="h-[20rem] w-64"
                                src="https://ifh.cc/g/hy1Dqp.jpg"/>
@@ -22,7 +27,7 @@ const Bookbox = (props) => {
                            <p className="mt-[0.25rem] font-bold text-[0.95rem]">마르지 않아도 잘 사는데요</p>
                            <p className="mt-[0.3rem] font-normal text-[0.79rem] text-gray-500">노은솔</p>
                        </div>
-                       <div className="h-full rounded-lg overflow-hidden transform transition-transform cursor-pointer duration-300 hover:scale-105">
+                       <div className="h-full rounded-lg overflow-hidden transform transition-transform cursor-pointer duration-300 hover:scale-105"onClick={() => handleClick(3)}>
                            <img
                                className="h-[20rem] w-64"
                                src="https://ifh.cc/g/Crkh1k.jpg"/>
@@ -30,7 +35,7 @@ const Bookbox = (props) => {
                            <p className="mt-[0.25rem] font-bold text-[0.95rem]">죽이고 싶은 아이2</p>
                            <p className="mt-[0.3rem] font-normal text-[0.79rem] text-gray-500">이꽃님</p>
                        </div>
-                       <div className="h-full rounded-lg overflow-hidden transform transition-transform cursor-pointer duration-300 hover:scale-105">
+                       <div className="h-full rounded-lg overflow-hidden transform transition-transform cursor-pointer duration-300 hover:scale-105"onClick={() => handleClick(4)}>
                            <img
                                className="h-[20rem] w-64"
                                src="https://ifh.cc/g/Rw8T21.jpg"/>
@@ -38,7 +43,7 @@ const Bookbox = (props) => {
                            <p className="mt-[0.25rem] font-bold text-[0.95rem]">마지막 지도 제작자</p>
                            <p className="mt-[0.3rem] font-normal text-[0.79rem] text-gray-500">크리스티나 순톤밧·책읽는곰</p>
                        </div>
-                       <div className="h-full rounded-lg overflow-hidden transform transition-transform cursor-pointer duration-300 hover:scale-105" onClick={handleClick}>
+                       <div className="h-full rounded-lg overflow-hidden transform transition-transform cursor-pointer duration-300 hover:scale-105" onClick={() => handleClick(1)}>
                            <img
                                className="h-[20rem] w-64"
                                src="https://ifh.cc/g/4SH8w8.jpg"/>
