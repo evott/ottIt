@@ -1,10 +1,10 @@
-import { BrowserRouter, Link, useNavigate, useParams } from "react-router-dom";
-import React, { useEffect, useState } from 'react';
+import { BrowserRouter, useNavigate, useParams } from "react-router-dom";
+import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import BookSwiper from "../components/BookSwiper.jsx";
 import BottomBox from "../components/BottomBox.jsx";
 import Eventscroll from "../components/Eventscroll.jsx";
-
+import Detailscroll from "../components/Detailscroll.jsx";
 
 const BookDetail = () => {
     const { id } = useParams(); // URL 파라미터에서 id를 가져옴
@@ -39,6 +39,15 @@ const BookDetail = () => {
             .catch(error => {
             });
     }, [id]);
+
+    const eventSectionRef = useRef(null);
+
+    const scrollToEventSection = () => {
+
+        if (eventSectionRef.current) {
+            eventSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <div className="flex flex-col">
@@ -166,27 +175,50 @@ const BookDetail = () => {
             </div>
             <div
                 className="flex flex-row w-full mx-auto h-[4rem] space-x-[3.5rem] items-center border-b-[0.1rem] border-gray-300">
-                <p className="ml-[18.8rem] text-gray-500 text-[1rem] font-medium">이벤트</p>
+                <p className="ml-[18.8rem] text-gray-500 text-[1rem] font-medium cursor-pointer"
+                   onClick={scrollToEventSection}>이벤트</p>
                 <p className="text-gray-500 text-[1rem] font-medium">상품정보</p>
                 <p className="text-gray-500 text-[1rem] font-medium">리뷰</p>
                 <p className="text-gray-500 text-[1rem] font-medium">교환/반품/품절</p>
             </div>
-            <div className="flex flex-row items-center ml-[18.8rem] mt-20 w-full mx-auto">
-                <p className="text-black font-black text-lg">이 책의 이벤트</p>
+            <div className="flex flex-row items-center ml-[18.6rem] h-7 mt-20 w-full mx-auto">
+                <p className="text-black font-black text-lg" ref={eventSectionRef}>이 책의 이벤트</p>
                 <p className="ml-[13.5rem] text-gray-600 text-xs">*해외주문/바로드림/제휴사주문/업체배송건의 경우 1+1 증정상품이 발송되지 않습니다.</p>
-                <p className="text-black ml-[3.2rem] font-black text-lg">기분 좋은 발견</p>
-                <p className="text-gray-600 mt-[0.2rem] ml-[10.5rem] font-medium text-xs items-center">더보기</p>
+                <p className="text-black ml-[6rem] font-black text-lg">기분 좋은 발견</p>
+                <p className="text-gray-600 mt-[0.2rem] ml-[10.5rem] font-medium text-xs items-center cursor-pointer">더보기</p>
             </div>
             <div className="flex flex-row items-center space-x-5 w-full">
-                <img className="ml-[18.5rem] w-[16rem] h-[9rem] rounded-2xl" src="https://ifh.cc/g/RGDOpK.jpg"></img>
-                <img className="w-[16rem] h-[9rem] rounded-2xl" src="https://ifh.cc/g/mbFVdP.jpg"></img>
-                <img className="w-[16rem] h-[9rem] rounded-2xl" src="https://ifh.cc/g/rJ81qr.jpg"></img>
-                <div className="mt-2">
-                <Eventscroll></Eventscroll>
+                <div className="ml-[18.5rem] mt-1 flex flex-col items-cente cursor-pointer rounded-2xl h-30 w-50">
+                    <img className=" mt-[1rem] w-[16rem] h-[8.9rem] rounded-2xl"
+                         src="https://ifh.cc/g/RGDOpK.jpg"></img>
+                    <p className="mt-3 text-black font-black text-sm w-[17rem] h-[1.0rem]">[스티키 노트] 서로에게 들려주는 따뜻한 말</p>
+                    <p className="mt-[2rem] h-[0.01rem] text-gray-600 text-xs font-semibold">2024/07/04 ~ 2024/07/31</p>
+                </div>
+                <div className="flex flex-col mt-1 items-cente cursor-pointer rounded-2xl h-30 w-50">
+                    <img className="cursor-pointer mt-[1rem] w-[16rem] h-[8.9rem] rounded-2xl"
+                         src="https://ifh.cc/g/mbFVdP.jpg"></img>
+                    <p className="mt-3 text-black font-black text-sm h-[1.0rem] w-[17rem]">[RGB 세기의 컬러들] 크루즈 디에즈 전시회 티켓
+                        응모!</p>
+                    <p className="mt-[2rem] h-[0.01rem] text-gray-600 text-xs font-semibold">2023/12/28 ~ 2023/12/28</p>
+                </div>
+                <div className="flex flex-col mt-1 items-cente cursor-pointer rounded-2xl h-30 w-50">
+                    <img className="cursor-pointer mt-[1rem] w-[16rem] h-[8.9rem] rounded-2xl"
+                         src="https://ifh.cc/g/rJ81qr.jpg"></img>
+                    <p className="mt-3 text-black font-black text-sm h-[1.0rem] w-[17rem]">[만복이네 떡집 열 번째 이야기] 왕구리네
+                        떡집</p>
+                    <p className="mt-[2rem] h-[0.01rem] text-gray-600 text-xs font-semibold">2024/06/11 ~ 2024/07/12</p>
+                </div>
+                <div className="mb-7 ">
+                    <Eventscroll></Eventscroll>
                 </div>
             </div>
-            <div>
-                <img src="https://ifh.cc/g/rJ81qr.jpg"></img>
+            <div className="flex flex-row mt-[6rem] w-full mx-auto">
+                <div className="flex flex-col ml-[18.4rem]">
+                <p className="text-black font-black text-lg">함께 구매한 책</p>
+                    <div className="mt-4">
+                    <Detailscroll></Detailscroll>
+                    </div>
+                </div>
             </div>
         </div>
     )

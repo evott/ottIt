@@ -35,7 +35,7 @@ const Bookbox = (props) => {
                            <p className="mt-[0.25rem] font-bold text-[0.95rem]">죽이고 싶은 아이2</p>
                            <p className="mt-[0.3rem] font-normal text-[0.79rem] text-gray-500">이꽃님</p>
                        </div>
-                       <div className="h-full rounded-lg overflow-hidden transform transition-transform cursor-pointer duration-300 hover:scale-105"onClick={() => handleClick(4)}>
+                       <div className="h-full rounded-lg overflow-hidden transform transition-transform cursor-pointer duration-300 hover:scale-105" onClick={() => handleClick(4)}>
                            <img
                                className="h-[20rem] w-64"
                                src="https://ifh.cc/g/Rw8T21.jpg"/>

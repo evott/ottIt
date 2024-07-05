@@ -85,7 +85,6 @@ button:focus-visible {
   display: flex;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
   text-align:center;
   align-items:center;
   justify-content:center;
@@ -114,13 +113,9 @@ button:focus-visible {
 .swiper-scrollbar {
   background-color: rgb(243 244 246); /* 스크롤바 배경색 조정 */
   border-radius: 10px; /* 스크롤바의 둥근 모서리 조정 */
-  align-items: center;
-  justify-items: center;
 }
 
 .swiper-scrollbar-drag {
-  background-color: rgb(75 85 99);; /* 드래그 중인 스크롤바의 색상 조정 */
+  background-color: black; /* 드래그 중인 스크롤바의 색상 조정 */
   height: 60%; /* 스크롤바의 배경 높이 조정 */
-  align-items: center;
-  justify-items: center;
 }

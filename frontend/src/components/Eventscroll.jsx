@@ -116,11 +116,11 @@ const Eventscroll = () => {
                 modules={[Scrollbar]}
                 className="mySwiper"
             >
-                <SwiperSlide style={slideStyle}><img style={imageStyle} src="https://ifh.cc/g/njcJRt.jpg"/></SwiperSlide>
-                <SwiperSlide style={slideStyle}><img style={imageStyle} src="https://ifh.cc/g/Pnh7X5.jpg"/></SwiperSlide>
-                <SwiperSlide style={slideStyle}><img style={imageStyle} src="https://ifh.cc/g/nDCzYj.jpg"/></SwiperSlide>
-                <SwiperSlide style={slideStyle}><img style={imageStyle} src="https://ifh.cc/g/rGndZS.jpg"/></SwiperSlide>
-                <SwiperSlide style={slideStyle}><img style={imageStyle} src="https://ifh.cc/g/xpQv7N.jpg"/></SwiperSlide>
+                <SwiperSlide style={slideStyle}><img style={imageStyle} className="cursor-pointer rounded-2xl" src="https://ifh.cc/g/njcJRt.jpg"/></SwiperSlide>
+                <SwiperSlide style={slideStyle}><img style={imageStyle} className="cursor-pointer rounded-2xl" src="https://ifh.cc/g/Pnh7X5.jpg"/></SwiperSlide>
+                <SwiperSlide style={slideStyle}><img style={imageStyle} className="cursor-pointer rounded-2xl" src="https://ifh.cc/g/nDCzYj.jpg"/></SwiperSlide>
+                <SwiperSlide style={slideStyle}><img style={imageStyle} className="cursor-pointer rounded-2xl" src="https://ifh.cc/g/rGndZS.jpg"/></SwiperSlide>
+                <SwiperSlide style={slideStyle}><img style={imageStyle} className="cursor-pointer rounded-2xl" src="https://ifh.cc/g/xpQv7N.jpg"/></SwiperSlide>
             </Swiper>
         </div>
     );
