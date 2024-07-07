@@ -54,6 +54,9 @@
                                     <li><a>국내도서</a></li>
                                     <li><a>서양도서</a></li>
                                     <li><a>일본도서</a></li>
+                                    <li>
+                                        <a href="Shopping" onClick="location.href='Shopping.jsx'">장바구니</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

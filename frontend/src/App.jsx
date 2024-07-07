@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar.jsx";
 import BookDetail from "./pages/BookDetail.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
 import Login from "./components/Login.jsx";
+import Shopping from "./components/Shopping.jsx";
+
 import BottomBox from "./components/BottomBox.jsx";
 
 function App() {
@@ -15,6 +17,10 @@ function App() {
                 <Route path="/BookDetail/:id" element={<BookDetail />} />
                 <Route path="/ProductDetail" element={<ProductDetail/>}/>
                 <Route path="/Login" element={<Login/>}/>
+                <Route path="/Shopping" element={<Shopping/>}/>
+
+
+
             </Routes>
         </>
     );
