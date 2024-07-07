@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react';
 import { Dialog,  DialogPanel, DialogTitle } from '@headlessui/react';
 
@@ -23,7 +21,7 @@ const products = [
     // More products...
 ]
 
-export default function Shopping() {
+function Shopping() {
     const [open, setOpen] = useState(true)
 
     return (
@@ -119,4 +117,5 @@ export default function Shopping() {
         </Dialog>
     )
 }
+export default Shopping;
 

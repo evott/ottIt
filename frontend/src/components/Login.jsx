@@ -1,5 +1,5 @@
 
-export default function Login() {
+function Login() {
 
     return (
         <>
@@ -80,3 +80,4 @@ export default function Login() {
         </>
     )
 }
+export default Login;
