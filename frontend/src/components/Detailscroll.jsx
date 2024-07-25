@@ -116,7 +116,7 @@ const Detailscroll = () => {
                     <img className="cursor-pointer" src="https://ifh.cc/g/M5dMrF.jpg"/>
                     <p className="text-black text-sm mt-[0.7rem] font-semibold">제철 행복</p>
                     <p className="text-gray-600 mt-[0.4rem] text-xs font-semibold">김신지</p>
-                    <p className="ttext-black mt-[1rem] text-xs font-semibold">16,020원</p>
+                    <p className="text-black mt-[1rem] text-xs font-semibold">16,020원</p>
                 </SwiperSlide>
                 <SwiperSlide className="flex flex-col mt-[4.4rem]" style={slideStyle}>
                     <img className="cursor-pointer" src="https://ifh.cc/g/KS6Ctm.jpg"/>
@@ -128,37 +128,37 @@ const Detailscroll = () => {
                     <img className="cursor-pointer" src="https://ifh.cc/g/JKZtj9.jpg"/>
                     <p className="text-left text-black text-sm ml-[0.2rem] mt-[0.7rem] font-semibold">마르지 않아도 잘 사는데요</p>
                     <p className="text-gray-600 mt-[0.4rem] text-xs font-semibold">노은솔</p>
-                    <p className="ttext-black mt-[1rem] text-xs font-semibold">17,820원</p>
+                    <p className="text-black mt-[1rem] text-xs font-semibold">17,820원</p>
                 </SwiperSlide>
                 <SwiperSlide className="flex flex-col mt-[5em]" style={slideStyle}>
                     <img className="cursor-pointer" src="https://ifh.cc/g/t0OnTG.jpg"/>
                     <p className="text-left text-black text-sm ml-[0.2rem] mt-[0.7rem] font-semibold">그럼에도 불구하고 나는 내가 좋았어</p>
                     <p className="text-gray-600 mt-[0.4rem] text-xs font-semibold">박채린</p>
-                    <p className="ttext-black mt-[1rem] text-xs font-semibold">16,200원</p>
+                    <p className="text-black mt-[1rem] text-xs font-semibold">16,200원</p>
                 </SwiperSlide>
                 <SwiperSlide className="flex flex-col mt-[4.4rem]" style={slideStyle}>
                     <img className="cursor-pointer" src="https://ifh.cc/g/qh8yvw.jpg"/>
                     <p className="text-left text-black text-sm ml-[0.2rem] mt-[0.7rem] font-semibold">블리스(BLISS)</p>
                     <p className="text-gray-600 mt-[0.4rem] text-xs font-semibold">임현정</p>
-                    <p className="ttext-black mt-[1rem] text-xs font-semibold">17,100원</p>
+                    <p className="text-black mt-[1rem] text-xs font-semibold">17,100원</p>
                 </SwiperSlide>
                 <SwiperSlide className="flex flex-col mt-[5rem]" style={slideStyle}>
                     <img className="cursor-pointer" src="https://ifh.cc/g/qDKDKX.jpg"/>
                     <p className="text-left text-black text-sm ml-[0.2rem] mt-[0.7rem] font-semibold">우리는 날마다 조금씩 행복해진다</p>
                     <p className="text-gray-600 mt-[0.4rem] text-xs font-semibold">얼미부부</p>
-                    <p className="ttext-black mt-[1rem] text-xs font-semibold">15,750원</p>
+                    <p className="text-black mt-[1rem] text-xs font-semibold">15,750원</p>
                 </SwiperSlide>
                 <SwiperSlide className="flex flex-col mt-[4.4rem]" style={slideStyle}>
                     <img className="cursor-pointer" src="https://ifh.cc/g/G4TF64.jpg"/>
                     <p className="text-left text-black text-sm ml-[0.2rem] mt-[0.7rem] font-semibold">금빛 종소리</p>
                     <p className="text-gray-600 mt-[0.4rem] text-xs font-semibold">김하나</p>
-                    <p className="ttext-black mt-[1rem] text-xs font-semibold">15,300원</p>
+                    <p className="text-black mt-[1rem] text-xs font-semibold">15,300원</p>
                 </SwiperSlide>
                 <SwiperSlide className="flex flex-col mt-[4.4rem]" style={slideStyle}>
                     <img className="cursor-pointer" src="https://ifh.cc/g/OQo7oJ.jpg"/>
                     <p className="text-left text-black text-sm ml-[0.2rem] mt-[0.7rem] font-semibold">허송세월</p>
                     <p className="text-gray-600 mt-[0.4rem] text-xs font-semibold">김훈</p>
-                    <p className="ttext-black mt-[1rem] text-xs font-semibold">16,200원</p>
+                    <p className="text-black mt-[1rem] text-xs font-semibold">16,200원</p>
                 </SwiperSlide>
             </Swiper>
         </div>
