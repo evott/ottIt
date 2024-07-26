@@ -7,21 +7,17 @@ import Login from "./components/Login.jsx";
 import Shopping from "./components/Shopping.jsx";
 
 import BottomBox from "./components/BottomBox.jsx";
-import ModalPopup from "./components/ModalPopup.jsx";
 
 function App() {
     return (
         <>
             <Navbar/>
-            <ModalPopup/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/BookDetail/:id" element={<BookDetail />} />
                 <Route path="/ProductDetail" element={<ProductDetail/>}/>
                 <Route path="/Login" element={<Login/>}/>
                 <Route path="/Shopping" element={<Shopping/>}/>
-
-
             </Routes>
         </>
     );

@@ -227,56 +227,56 @@ const BookDetail = () => {
                     <div className="flex flex-row mt-8 ms-[4rem] w-auto items-center mx-auto">
                         <img
                             className="h-[10rem] w-[6.5rem]"
-                            src="https://ifh.cc/g/Rw8T21.jpg"/>
+                            src={BookData.book_src}/>
                         <div className="flex flex-col ml-4">
                             <p>1</p>
-                            <p>허송세월</p>
-                            <p>김훈</p>
-                            <p>10% 16,200원</p>
+                            <p>{BookData.book_name}</p>
+                            <p>{BookData.book_writer}</p>
+                            <p>{BookData.book_price}</p>
                         </div>
                     </div>
                     <div className="flex flex-row mt-4 ms-[4rem] w-auto items-center mx-auto">
                         <img
                             className="h-[10rem] w-[6.5rem]"
-                            src="https://ifh.cc/g/Rw8T21.jpg"/>
+                            src={BookData.book_src}/>
                         <div className="flex flex-col ml-4">
                             <p>1</p>
-                            <p>허송세월</p>
-                            <p>김훈</p>
-                            <p>10% 16,200원</p>
+                            <p>{BookData.book_name}</p>
+                            <p>{BookData.book_writer}</p>
+                            <p>{BookData.book_price}</p>
                         </div>
                     </div>
                     <div className="flex flex-row mt-4 ms-[4rem] w-auto items-center mx-auto">
                         <img
                             className="h-[10rem] w-[6.5rem]"
-                            src="https://ifh.cc/g/Rw8T21.jpg"/>
+                            src={BookData.book_src}/>
                         <div className="flex flex-col ml-4">
                             <p>1</p>
-                            <p>허송세월</p>
-                            <p>김훈</p>
-                            <p>10% 16,200원</p>
+                            <p>{BookData.book_name}</p>
+                            <p>{BookData.book_writer}</p>
+                            <p>{BookData.book_price}</p>
                         </div>
                     </div>
                     <div className="flex flex-row mt-4 ms-[4rem] w-auto items-center mx-auto">
                         <img
                             className="h-[10rem] w-[6.5rem]"
-                            src="https://ifh.cc/g/Rw8T21.jpg"/>
+                            src={BookData.book_src}/>
                         <div className="flex flex-col ml-4">
                             <p>1</p>
-                            <p>허송세월</p>
-                            <p>김훈</p>
-                            <p>10% 16,200원</p>
+                            <p>{BookData.book_name}</p>
+                            <p>{BookData.book_writer}</p>
+                            <p>{BookData.book_price}</p>
                         </div>
                     </div>
                     <div className="flex flex-row mt-4 ms-[4rem] w-auto items-center mx-auto">
                         <img
                             className="h-[10rem] w-[6.5rem]"
-                            src="https://ifh.cc/g/Rw8T21.jpg"/>
+                            src={BookData.book_src}/>
                         <div className="flex flex-col ml-4">
                             <p>1</p>
-                            <p>허송세월</p>
-                            <p>김훈</p>
-                            <p>10% 16,200원</p>
+                            <p>{BookData.book_name}</p>
+                            <p>{BookData.book_writer}</p>
+                            <p>{BookData.book_price}</p>
                         </div>
                     </div>
                 </div>
