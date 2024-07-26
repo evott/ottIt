@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import OtherPayment from './OtherPayment.jsx';
 
 const PaymentForm = () => {
     const [address, setAddress] = useState('');
@@ -85,45 +86,57 @@ const PaymentForm = () => {
                     <div className="mt-3 mb-12">
                         <label className="border-black mb-10">주소:</label>
                         <input className="w-96 m-3 border-solid border-gray-800"
-                            type="text"
-                            value={address}
-                            onChange={(e) => setAddress(e.target.value)}
-                            required
+                               type="text"
+                               value={address}
+                               onChange={(e) => setAddress(e.target.value)}
+                               required
                         />
                     </div>
                 </div>
 
                 {/* 결제 수단 선택 */}
-                <div className="mb-16">
-                    <h3>결제 수단 선택</h3>
-                    <div className="mb-10">
-                        <label>
-                            <input type="checkbox" name="test" value="creditCard"
+                <div className="mb-2">
+                    <h3 className="mb-3">결제 수단 선택</h3>
+                    <div>
+                        <div className="items-center p-4">
+                            <input type="checkbox"
+                                   name="test"
+                                   value="creditCard"
+                                   className="checkbox"
                                    checked={paymentMethod === 'creditCard'}
                                    onChange={(e) => setPaymentMethod(e.target.value)}
                             />
-                            신용카드&nbsp;
-                        </label>
-                        <label>
-                                <input type="checkbox" name="test" value="kaoPay"
-                                       checked={paymentMethod === 'kaoPay'}
-                                       onChange={(e) => setPaymentMethod(e.target.value)}/>
-                                <img src="https://ifh.cc/g/ZcaDQh.png" className="w-20"/>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="test" value="naiverPay"
+                            <span className="m-3">신용카드<br></br></span>
+                        </div>
+                        <div className="flex items-center p-4">
+                            <input type="checkbox"
+                                   name="test"
+                                   value="kaoPay"
+                                   className="checkbox"
+                                   checked={paymentMethod === 'kaoPay'}
+                                   onChange={(e) => setPaymentMethod(e.target.value)}/>
+                            <img src="https://ifh.cc/g/ZcaDQh.png" className="w-20 ml-2"/>
+                        </div>
+                        <div className="flex items-center p-4">
+                            <input type="checkbox"
+                                   name="test"
+                                   value="naiverPay"
+                                   className="checkbox"
                                    checked={paymentMethod === 'naiverPay'}
                                    onChange={(e) => setPaymentMethod(e.target.value)}/>
-                        </label>
-                        <img src="https://ifh.cc/g/kJ6ZCH.jpg" className="w-20"/>
-                        <label>
-                            <input type="checkbox" name="test" value="bank"
+                            <img src="https://ifh.cc/g/kJ6ZCH.jpg" className="w-20 ml-3"/>
+                        </div>
+                        <div className="items-center p-4">
+                            <input type="checkbox"
+                                   name="test"
+                                   value="bank"
+                                   className="checkbox"
                                    checked={paymentMethod === 'bank'}
                                    onChange={(e) => setPaymentMethod(e.target.value)}/>
-                            은행 이체
-                        </label>
+                            <span className="m-3">다른 결제 수단</span>
+                        </div>
                     </div>
-
+                    {/*카드결제*/}
                     {paymentMethod === 'creditCard' && (
                         <>
                             <div className="mb-10">
@@ -161,7 +174,10 @@ const PaymentForm = () => {
                         </>
                     )}
                 </div>
-
+                {/*다른결제*/}
+                {paymentMethod === 'bank' && (
+                    <OtherPayment></OtherPayment>
+                    )}
                 {/* 결제하기 버튼 */}
                 <button className="btn btn-primary w-40 mt-5 ml-80">결제하기</button>
             </form>

@@ -1,13 +1,35 @@
-const modal = document.querySelector('.modal');
-const modalOpen = document.querySelector('.modal_btn');
-const modalClose = document.querySelector('.close_btn');
+import React, { useState, useRef, useEffect } from 'react';
+import './Modal.css';
 
 
-//열기 버튼을 눌렀을 때 모달팝업이 열림
-modalOpen.addEventListener('click',function(){
-    modal.style.display = 'block';
-});
-//닫기 버튼을 눌렀을 때 모달팝업이 닫힘
-modalClose.addEventListener('click',function(){
-    modal.style.display = 'none';
-});
+const ModalPopup = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+    const modalBackground = useRef(null);
+
+    useEffect(() => {
+        setModalOpen(true);
+    }, []);
+
+    return (
+        <>
+            {
+                modalOpen && (
+                <div className="container h-16 w-20 items-center justify-center" ref={modalBackground} onClick={e => {
+                    if (e.target === modalBackground.current) {
+                        setModalOpen(false);
+                    }
+                }}>
+                    <div className="modal-content">
+                        <p>Choose your taste</p>
+                        <button className="modal-close-btn" onClick={() => setModalOpen(false)}>
+                            <p id='golink'> Learn more</p>
+                        </button>
+                    </div>
+                </div>
+                    )
+            }
+        </>
+    );
+};
+
+export default ModalPopup;
