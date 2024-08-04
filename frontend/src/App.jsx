@@ -5,7 +5,7 @@ import BookDetail from "./pages/BookDetail.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
 import Login from "./components/Login.jsx";
 import Shopping from "./components/Shopping.jsx";
-
+import PaymentForm from "./Pay/PaymentForm.jsx";
 import BottomBox from "./components/BottomBox.jsx";
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
         <>
             <Navbar/>
             <Routes>
+                <Route path="/PaymentForm" element={<PaymentForm/>} />
                 <Route path="/" element={<Home/>}/>
                 <Route path="/BookDetail/:id" element={<BookDetail />} />
                 <Route path="/ProductDetail" element={<ProductDetail/>}/>
@@ -22,5 +23,6 @@ function App() {
         </>
     );
 }
-
+/*
+*/
 export default App;
