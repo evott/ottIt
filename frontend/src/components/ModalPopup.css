@@ -1,0 +1,92 @@
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+/*.modal-open-button,*/
+.modal-close-btn {
+    width: 589px;
+    height: 92px;
+    border-radius: 50px;
+    background: #4a494f;
+    cursor: pointer;
+    position: relative;
+    /*margin: 0 auto;*/
+}
+
+img {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#golink{
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    margin: auto;
+
+}
+
+P {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: #4a494f;
+}
+
+.modal-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: rgba(0,0,0,0.5);
+
+    /*
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    */
+
+}
+
+.modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 750px;
+    height: 750px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.25);
+    transform: translate(-50%,-50%);
+
+    /*
+    background-color: #ffffff;
+    width: 700px ;
+    height: 521px;
+    padding: 15px;
+    border-radius: 20px 20px 20px 20px;
+    text-align: center;*/
+}
+.modald-close-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}

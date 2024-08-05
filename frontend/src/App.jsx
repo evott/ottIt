@@ -5,6 +5,7 @@ import BookDetail from "./pages/BookDetail.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
 import Login from "./components/Login.jsx";
 import Shopping from "./components/Shopping.jsx";
+import ModalPopup from "./components/ModalPopup.jsx";
 
 import BottomBox from "./components/BottomBox.jsx";
 
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/ProductDetail" element={<ProductDetail/>}/>
                 <Route path="/Login" element={<Login/>}/>
                 <Route path="/Shopping" element={<Shopping/>}/>
+                <Route path="/ModalPopup" element={<ModalPopup/>}/>
 
 
 

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import {useRecoilValue} from "recoil";
 import Bookbox from "../components/Bookbox.jsx";
+import ModalPopup from "../components/ModalPopup.jsx";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay, EffectCoverflow } from "swiper";
